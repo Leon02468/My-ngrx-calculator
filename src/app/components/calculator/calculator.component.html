@@ -1,0 +1,45 @@
+
+<div class="calculator">
+    <div class="screen">
+        <p>{{(number$ | async)?.inputNumber ?? 0}}</p>
+    </div>
+    <div class="pad">
+        <div class="num-pad">
+            <div class="top-row">
+                <button class="num" (click)="pressKey('7', 'number')">7</button>
+                <button class="num" (click)="pressKey('8', 'number')">8</button>
+                <button class="num" (click)="pressKey('9', 'number')">9</button>
+            </div>
+            <div class="mid-row">
+                <button class="num" (click)="pressKey('4', 'number')">4</button>
+                <button class="num" (click)="pressKey('5', 'number')">5</button>
+                <button class="num" (click)="pressKey('6', 'number')">6</button>
+            </div>
+            <div class="mid-row">
+                <button class="num" (click)="pressKey('1', 'number')">1</button>
+                <button class="num" (click)="pressKey('2', 'number')">2</button>
+                <button class="num" (click)="pressKey('3', 'number')">3</button>
+            </div>
+            <div class="bot-row">
+                <button class="num" id="num-0" (click)="pressKey('0', 'number')">0</button>
+                <button class="symbol" (click)="pressKey('.', 'number')">.</button>
+            </div>
+        </div>
+        <div class="cal-pad">
+            <div class="top-row">
+                <button id="AC-btn" (click)="pressKey('AC', 'operator')">AC</button>
+            </div>
+            <div class="mid-row">
+                <button class="symbol" (click)="pressKey('+', 'operator')">+</button>
+                <button class="symbol" (click)="pressKey('-', 'operator')">-</button>
+            </div>
+            <div class="mid-row">
+                <button class="symbol" (click)="pressKey('*', 'operator')">x</button>
+                <button class="symbol" (click)="pressKey('/', 'operator')">/</button>
+            </div>
+            <div class="bot-row">
+                <button class="symbol" id="equal-symbol" (click)="pressKey('=', 'operator')">=</button>
+            </div>
+        </div>
+    </div>
+</div>
